@@ -1,83 +1,61 @@
-@import url("https://unpkg.com/open-props/normalize.min.css") layer(normalize);
+@import url('gold.css') layer(gold);
 
+
+:root {
+    --m: 2rem;
+}
 
 body {
     font-family: monospace;
-}
-
-header {
-    place-self: center;
-    font-weight: bold;
-    font-size: 4rem;
-    padding-bottom: 1rem;
+    background: bisque;
+    &[cloak] {
+        display: none;
+    }
 }
 
 main {
-    display: grid;
-    grid-template-rows: 5rem 1fr;
-    overflow: hidden;
-    place-content: center;
-    place-items: center;
+    min-height: 100vh;
 }
 
-#input-container {
-    display: flex;
-    gap: 1rem;
-    padding: 0 2rem 1rem 2rem;
-    border-bottom: 2px solid blue;
-    border-bottom-right-radius: 5rem;
-    border-bottom-left-radius: 5rem;
-    margin-bottom: 2rem;
+button {
+    padding: var(--s);
+    border: 1px solid saddlebrown;
 }
 
-#svg-container {
-    height: 20rem;
-    width: 100vw;
-}
-
-svg {
-    width: 100%;
-    height: 100%;
-}
-
-use:hover {
+.galf {
     filter: invert(1);
 }
 
-#g1 text {
-    font-size: 3rem;
-    font-style: italic;
-    letter-spacing: 1rem;
-    mix-blend-mode: multiply;
+input {
+    width: 100%;
 }
 
-[rainbow] {
-    animation: rainbow-stroke 3s linear infinite alternate;
+#combobox {
+    max-height: 10rem;
+    width: 100%;
+    padding-right: 2rem;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: saddlebrown bisque;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: bisque;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: saddlebrown;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: darken(saddlebrown, 10%);
+    }
 }
 
-@keyframes rainbow-stroke {
-    0% {
-        stroke: hsl(0, 100%, 50%);
-    }
-    14% {
-        stroke: hsl(42, 100%, 50%);
-    }
-    28% {
-        stroke: hsl(84, 100%, 50%);
-    }
-    42% {
-        stroke: hsl(126, 100%, 50%);
-    }
-    57% {
-        stroke: hsl(168, 100%, 50%);
-    }
-    71% {
-        stroke: hsl(210, 100%, 50%);
-    }
-    85% {
-        stroke: hsl(252, 100%, 50%);
-    }
-    100% {
-        stroke: hsl(294, 100%, 50%);
-    }
+.choice:hover {
+    background: cornsilk;
 }

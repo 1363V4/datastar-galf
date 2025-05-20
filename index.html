@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GALF</title>
+    <title>The GALF game!</title>
     <script type="module" src="https://cdn.jsdelivr.net/gh/starfederation/datastar@1.0.0-beta.11/bundles/datastar.js"></script>
     <link rel="stylesheet" href="static/css/main.css">
     <script src="static/js/main.js"></script>
@@ -12,14 +12,13 @@
 cloak
 data-attr-cloak="false">
     <main 
-    class="gc"
     data-signals="{game: 0, id: 0, min: 0, max: 45, answer: ''}">
         <div data-show="$game == 0">
             <button 
             data-on-click="$answer=''; $id = @fit(Math.random(), 0, 1, $min, $max, true, true); $game = 1"
             >Get galf</button>
         </div>
-        <div data-show="$game == 1" class="gc gs">
+        <div id="screen1" data-show="$game == 1">
             <img 
             class="galf"
             data-attr-src="'static/img/eu_flags/' + flags[$id] + '.png'"/>
@@ -308,20 +307,17 @@ data-attr-cloak="false">
         <div data-show="$game == 2">
             <div data-show="$answer != flags[$id].toLowerCase()">
                 <img data-attr-src="'static/img/flags/' + flags[$id] + '.png'"/>
-                <p>Wrong!</p>
+                <p><strong>Wrong!</strong></p>
                 <p>The answer was <span data-text="flags[$id]"></span></p>
                 <button data-on-click="$game = 0">new game</button>
             </div>
             <div data-show="$answer == flags[$id].toLowerCase()">
                 <img data-attr-src="'static/img/flags/' + flags[$id] + '.png'"/>
-                <p>Well played!</p>
+                <p><strong>Well played!</strong></p>
                 <button data-on-click="$game = 0">new game</button>
             </div>
         </div>
-
-        <!-- <div data-text="$id"></div>
-        <div data-text="$answer"></div>
-        <div data-text="$game"></div> -->
+        <!-- <div data-text="ctx.signals.JSON()"></div> -->
     </main>
 </body>
 </html>

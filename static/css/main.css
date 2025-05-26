@@ -22,6 +22,17 @@ main {
 
 h1 {
     font-family: "Potta One";
+    font-size: 2rem;
+    animation: hueRotate 5s infinite linear;
+}
+
+@keyframes hueRotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
 }
 
 button {

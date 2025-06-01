@@ -30,7 +30,7 @@ data-attr-cloak="false">
             <form id="form" data-on-submit="$game = 2">
                 <input 
                 data-bind-answer 
-                data-signals-focused=0 data-on-focus="$focused = 1" data-on-blur="$focused = 0"
+                data-signals-focused=0 data-on-focus="$focused = 1" data-on-blur="setTimeout(() => $focused = 0, 500)"
                 placeholder="???">
                 <div id="combobox">
                     <div 

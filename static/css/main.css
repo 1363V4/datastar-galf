@@ -38,6 +38,7 @@ h1 {
 button {
     padding: var(--s);
     border: 1px solid saddlebrown;
+    cursor: pointer;
     &:hover {
         background: beige;
     }
@@ -86,4 +87,5 @@ input {
 
 .choice:hover {
     background: cornsilk;
+    cursor: pointer;
 }

@@ -49,6 +49,10 @@ button {
     grid-auto-rows: max-content;
 }
 
+img {
+    width: 10rem;
+}
+
 .galf {
     filter: invert(1);
 }

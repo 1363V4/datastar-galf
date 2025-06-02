@@ -89,3 +89,10 @@ input {
     background: cornsilk;
     cursor: pointer;
 }
+
+/* 
+STYLING DATALIST IS NOT POSSIBLE
+datalist option {
+    background: orange;
+    font-size: .1rem;
+} */
